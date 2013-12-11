@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 using namespace std;
 
 #define MAX 100001
@@ -30,7 +31,7 @@ int k=50;
 
 
 
-void printMST(int parent[])
+void print(int parent[])
 	{
 		while(k>nodes-1){
 		printf("\nEnter an integer k: ");
@@ -64,7 +65,7 @@ void printMST(int parent[])
 int main() {
 	int parent[50];
 	string line;
-	string FILENAME = "input2.txt";
+	string FILENAME = "input.txt";
 	ifstream istream;
 
     int i, w, sz;
@@ -156,11 +157,11 @@ int main() {
 	printf("End Dijkstra\n");
 
 	
-
+	print(parent);
     }
 	
 
-	printMST(parent);
+	
 	
   
     return 0;
